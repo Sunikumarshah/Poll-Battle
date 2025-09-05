@@ -1,0 +1,184 @@
+/* Reset + global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  color: #fff;
+}
+
+/* Poll container */
+.container {
+  width: 100%;
+  max-width: 750px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  animation: fadeIn 0.8s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Headings */
+h2, h3 {
+  text-align: center;
+  margin-bottom: 22px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+button {
+  padding: 14px 22px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+button:hover {
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+button:disabled {
+  background: #777;
+  cursor: not-allowed;
+}
+
+/* Input fields */
+input {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid #36d1dc;
+  box-shadow: 0 0 8px rgba(54,209,220,0.7);
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+/* Poll options */
+.option {
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.option:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Progress bar */
+.option .progress {
+  margin-top: 12px;
+  height: 14px;
+  border-radius: 7px;
+  background: rgba(255,255,255,0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+.option .progress-fill {
+  height: 100%;
+  transition: width 0.6s ease;
+  border-radius: 7px;
+}
+
+.option.A .progress-fill {
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  box-shadow: 0 0 10px #00f260, 0 0 20px #0575e6;
+}
+
+.option.B .progress-fill {
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+  box-shadow: 0 0 10px #f7971e, 0 0 20px #ffd200;
+}
+
+/* Percentage text */
+.option .percent-text {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #eee;
+  text-align: right;
+}
+
+/* Small text */
+.small {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 8px;
+}
+
+/* Alerts */
+.alert {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 500;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.alert-warning {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffd54f;
+  border: 1px solid #ffd54f;
+}
+
+.alert-error {
+  background: rgba(244, 67, 54, 0.2);
+  color: #ef9a9a;
+  border: 1px solid #ef5350;
+}
+
+/* Room info */
+.room-info {
+  margin: 20px 0;
+  padding: 14px;
+  background: rgba(33, 150, 243, 0.15);
+  border-left: 5px solid #2196f3;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #90caf9;
+}
